@@ -9,7 +9,6 @@ public class VehicleRegistrationSystem implements VehicleRegistration {
     private static final String VEHICLES_FILE = "vehicles.dat"; // File to store vehicle data
     private static final String CERTIFICATES_FILE = "certificates.dat"; // File to store certificate data
     private static VehicleRegistrationSystem instance; // Singleton instance
-
     // Private constructor to prevent instantiation from outside
     private VehicleRegistrationSystem() {
         vehicles = new HashMap<>();
@@ -178,6 +177,13 @@ public class VehicleRegistrationSystem implements VehicleRegistration {
             e.printStackTrace();
         }
     }
+
+    // Getter for certificates (for testing purposes)
+    public Map<String, RegistrationCertificate> getCertificates() {
+        return certificates;
+    }
+
+
 }
 
 
